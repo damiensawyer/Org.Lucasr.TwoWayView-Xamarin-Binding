@@ -16,7 +16,7 @@
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +50,12 @@
     <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
     </Reference>
+    <Reference Include="Org.Lucasr.TwoWayView">
+      <HintPath>..\Org.Lucasr.TwoWayView.Core\bin\Debug\Org.Lucasr.TwoWayView.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Lucasr.TwoWayView.Widget">
+      <HintPath>..\Org.Lucasr.TwoWayView.Widget\bin\Debug\Org.Lucasr.TwoWayView.Widget.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -79,16 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Properties\AndroidManifest.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Org.Lucasr.TwoWayView.Core\Org.Lucasr.TwoWayView.Core.csproj">
-      <Project>{67650C74-E456-4DA2-9CCD-6907850576E2}</Project>
-      <Name>Org.Lucasr.TwoWayView.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Org.Lucasr.TwoWayView.Widget\Org.Lucasr.TwoWayView.Widget.csproj">
-      <Project>{AF8C9135-418E-4939-A1B1-29691625F774}</Project>
-      <Name>Org.Lucasr.TwoWayView.Widget</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
